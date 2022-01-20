@@ -18,8 +18,8 @@ Users should be able to:
 ### Screenshot
 
 <p align="center">
-  <img src="../assets/desktop.png">
-  <img src="../assets/mobile.png">
+  <img src="./assets/desktop.png">
+  <img src="./assets/mobile.png">
 </p>
 
 
