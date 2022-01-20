@@ -1,13 +1,142 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+:root{
+
+/* primary color */
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet--social: hsl(264, 64%, 52%);
+  --Soft-orange-selfcare: hsl(43, 84%, 65%);
+
+
+  /* Neutral */
+
+--Very-dark-blue: hsl(223, 49%, 8%);
+--Dark-blue: hsl(235, 46%, 20%);
+--Desaturated-blue: hsl(235, 45%, 61%);
+--Pale-Blue: hsl(236, 100%, 87%);
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Rubik', sans-serif;
+  color: #fff;
+}
+body{
+  background-color: var(--Very-dark-blue);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  display: grid;
+  grid-template-columns: 1.8fr 5fr;
+  gap: 1.5rem;
+  height: 70vh;
+  width: 70vw;
+}
+
+.tasks{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.userprofile{
+  background-color: var(--Dark-blue);
+  border-radius: 1rem 1rem 0 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 1rem;
+
+}
+.userprofile picture > img{
+  width: 33%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 2rem;
+  border:2px solid white;
+  border-radius: 50%;
+}
+
+.user_info{
+  background-color:#5746EA;
+  border-radius: 1rem 1rem 1rem 1rem;
+  height: 65%;
+  padding: 2rem;
+}
+
+.user_info h1{
+  font-weight: 200;
+  font-size: clamp(1.5rem, 3vw, 3.5rem);
+}
+.user_info p{
+  font-size: clamp(0.6rem, 1vw, 2rem);
+}
+
+
+.setTime{
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 1rem;
+}
+.setTime h3{
+  font-weight: 200;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all .2s ease;
+  font-size: clamp(1.3rem, 1.1vw, 3rem);
+}
+
+.setTime h3:hover{
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 768px){
+  .tasks{
+    grid-template-columns: 1fr;
+  }
+  main{
+    grid-template-columns: 1fr;
+  }
+
+  .userprofile{
+    width: 100%;
+    height:100%;
+  }
+
+  .userprofile picture > img{
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .setTime{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .user_info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+
+  .user_info > div{
+    width: 100%;
+  }
 }
